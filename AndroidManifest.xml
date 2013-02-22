@@ -4,13 +4,14 @@
 	android:versionName="1.0">
 
 	<application android:icon="@drawable/icon" android:label="@string/app_name" >
-		<activity android:label="@string/app_name" android:name=".activity.DSPManager">
+		<activity android:label="@string/app_name" android:name=".activity.DSPManager" android:theme="@style/CustomTheme">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 			</intent-filter>
 			<intent-filter>
 				<action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL"></action>
 				<category android:name="android.intent.category.DEFAULT"></category>
+                                <category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 
@@ -46,10 +47,12 @@
 	</application>
 
 
-	<uses-sdk android:minSdkVersion="9"/>
+	<uses-sdk android:minSdkVersion="10"/>
 
 	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
 	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
-<uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+        <uses-permission android:name="android.permission.REVOKE_PERMISSIONS" />
+        <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+        <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
 </manifest> 
