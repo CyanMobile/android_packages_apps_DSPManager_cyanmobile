@@ -71,6 +71,10 @@ public final class DSPManager extends TabActivity {
 		intent = new Intent("com.bel.android.dspmanager.BLUETOOTH");
 		setupTab(new TextView(this), getString(R.string.bluetooth_title), intent);
 
+                if (getResources().getBoolean(R.bool.has_other_settings)) {
+		    intent = new Intent().setClass(DSPManager.this, OtherSettings.class);
+		    setupTab(new TextView(this), getString(R.string.select_configuration_title), intent);
+                }
          startService(new Intent(HeadsetService.NAME));
     }
 

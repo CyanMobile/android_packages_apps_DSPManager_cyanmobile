@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="fling_animation_duration">350</integer>
+
+    <!-- set true if have other setting that provide by prebuilt apk -->
+    <bool name="has_other_settings">false</bool>
 </resources>
